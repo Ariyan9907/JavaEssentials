@@ -1,15 +1,23 @@
 package com.src.records;
 
-record Empl(int id,String name,int sal){
+interface Person{
+    void work();
+}
+record Empl(int id,String name,int sal) implements Person{
     //we can give methods
     void disp(){
         System.out.println("Hello From Records");
+    }
+
+    @Override
+    public void work(){
+        System.out.println("Work as Worker");
     }
 }
 
 public class Main{
     public static void main(String[] args) {
-        Empl e1 = new Empl(1, "Aryan", 10000);
+        Person e1 = new Empl(1, "Aryan", 10000);
         Empl e2 = new Empl(1, "Aryan", 10000);
 
 
@@ -20,9 +28,10 @@ public class Main{
 
         System.out.println(e1);//To strings overriden
 
-        System.out.println(e1.id()+" "+e1.name()+" "+e1.sal());//Getters
+//        System.out.println(e1.id()+" "+e1.name()+" "+e1.sal());//Getters
+//        e1.disp();
 
-        e1.disp();
+        e1.work();
 
     }
 }
