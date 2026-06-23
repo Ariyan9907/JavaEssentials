@@ -5,7 +5,20 @@ interface Person{
 }
 record Empl(int id,String name,int sal) implements Person{
 
-    static int age=22;
+    static int age=22; //static variable
+
+    //we can give Compact contructor
+//    public Empl{
+//        System.out.println("from Compact contructor");
+//    }
+
+//    public Empl(int id,String name,int sal){
+//        this.id=id;
+//        this.name=name;
+//        this.sal=sal;
+//        System.out.println("From canonical contructor");
+//    }
+
     //we can give methods
     void disp(){
         System.out.println("Hello From Records");
