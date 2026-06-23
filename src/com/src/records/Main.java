@@ -12,9 +12,5 @@ public class Main{
 
         //Equallity check caus record automatically override tostring and hashcode and equals
         System.out.println(e1.equals(e3));  //true because it check on values
-
-
-
-
     }
 }
