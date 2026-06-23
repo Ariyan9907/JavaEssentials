@@ -4,6 +4,8 @@ interface Person{
     void work();
 }
 record Empl(int id,String name,int sal) implements Person{
+
+    static int age=22;
     //we can give methods
     void disp(){
         System.out.println("Hello From Records");
@@ -27,6 +29,7 @@ public class Main{
 
 
         System.out.println(e1);//To strings overriden
+        System.out.println(e2.age);
 
 //        System.out.println(e1.id()+" "+e1.name()+" "+e1.sal());//Getters
 //        e1.disp();
